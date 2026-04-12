@@ -1,4 +1,4 @@
-.nav-link{
+.nav-link {
     display: flex;
     gap: 50px;
     align-items: center;
@@ -14,26 +14,27 @@
     text-decoration: none;
 }
 
-.logo{
+.logo {
     padding-left: 100px;
     margin-top: 50px;
-    font-size: 61px;
+    font-size: 37px;
     font-family: 'Impact';
     color: white;
 }
 
-body{
+body {
     margin: 0;
     min-height: 100vh;
     background: radial-gradient(circle at center, #341f83 0%, #141313 50%);
 }
 
-header{
+header {
     position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 999;
 }
 
 main {
@@ -47,97 +48,411 @@ main {
     box-sizing: border-box;
 }
 
-.nama {
+.jojo-hero-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+    background-image: url('../assets/background_home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.jojo-hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 50px;
+    z-index: 2;
+    position: relative;
+}
+
+.jojo-hero-info {
+    background: #fff;
+    padding: 25px 35px;
+    width: 250px;
+    border-radius: 20px 0 20px 0;
+    box-shadow: 10px 10px 0px #8c26c9;
+    transform: translateY(50px);
+    animation: floatingInfo 4s ease-in-out infinite;
+    position: relative;
+}
+.jojo-hero-info::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    width: 5px;
+    height: 50px;
+    background-color: #ffde59;
+}
+
+@keyframes floatingInfo {
+    0%, 100% { transform: translateY(50px); }
+    50% { transform: translateY(35px); }
+}
+
+.info-title {
+    font-family: 'Impact', sans-serif;
+    color: #8c26c9;
+    margin: 0 0 10px 0;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.info-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.jojo-btn-small {
+    background-color: #8c26c9;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+.jojo-btn-small:hover {
+    background-color: #1a1a1a;
+}
+.jojo-btn-small .arrow {
+    background: #fff;
+    color: #8c26c9;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jojo-hero-character {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-placeholder {
+    width: 320px;
+    height: auto;
+    position: relative;
+    border: 6px solid #ffde59;
+    box-shadow: 12px 12px 0px #8c26c9;
+    transform: rotate(3deg);
+    transition: 0.3s ease;
+    overflow: hidden;
+    background: #141313;
+}
+
+.character-placeholder:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 15px 15px 0px #ffde59;
+}
+
+.hero-character-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.jojo-hero-side {
+    width: 350px;
+    text-align: right;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    font-size: 100px;
-    margin-bottom: 10px;
-    font-family: 'Impact';
+    justify-content: center;
+    gap: 10px;
 }
 
-.nama p {
+.hero-level {
+    font-family: 'Impact', sans-serif;
+    font-size: 24px;
+    color: #fff;
     margin: 0;
-    line-height: 1;
+    letter-spacing: 3px;
 }
 
-.nama2 {
-    color: #341f83;
+.hero-main-name {
+    font-family: 'Impact', sans-serif;
+    font-size: 80px;
+    color: #ffde59;
+    -webkit-text-stroke: 2px #8c26c9;
+    margin: 0;
+    line-height: 0.9;
 }
 
-.tagline {
-    font-size:37px;
-    margin-bottom: 10px;
-    font-family: 'Impact';
+.hero-quote {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    border-right: 4px solid #ffde59;
+    padding-right: 15px;
 }
 
-.motto {
+.action-button-jojo a {
+    background-color: #8c26c9;
+    color: #ffde59;
+    padding: 12px 30px;
+    font-family: 'Impact', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    border: 2px solid #ffde59;
+    box-shadow: 5px 5px 0px #1a1a1a;
+    transition: 0.2s;
+    display: inline-block;
+}
+.action-button-jojo a:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0px #1a1a1a;
+}
+
+.jojo-wrapper {
+    padding: 120px 100px 50px 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../assets/background_home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(20, 19, 19, 0.7);
+}
+
+.gogogo-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.gogo {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); 
+    animation: menacingFloat 3s linear infinite;
+}
+
+.g1 { top: 20%; left: 15%; animation-delay: 0s; }
+.g2 { top: 60%; left: 10%; animation-delay: 1.5s; width: 130px; }
+.g3 { top: 30%; right: 15%; animation-delay: 0.7s; width: 100px; }
+.g4 { top: 70%; right: 10%; animation-delay: 2.2s; }
+.g5 { top: 15%; left: 50%; animation-delay: 1.1s; width: 110px; }
+
+@keyframes menacingFloat {
+    0% { transform: translateY(30px) scale(0.8); opacity: 0; }
+    20% { opacity: 0.9; }
+    80% { opacity: 0.9; }
+    100% { transform: translateY(-30px) scale(1.1); opacity: 0; }
+}
+
+.jojo-layout {
+    display: flex;
+    gap: 60px;
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    background: rgba(20, 19, 19, 0.85);
+    padding: 50px;
+    border: 4px solid #ffde59;
+    box-shadow: 15px 15px 0px #8c26c9;
+    transform: perspective(1000px) rotateX(2deg);
+}
+
+
+.jojo-profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.jojo-profile-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    perspective: 500px;
+}
+
+.stand-aura {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #8c26c9;
+    background-image: 
+        repeating-linear-gradient(45deg, rgba(140, 38, 201, 0.35) 0px, rgba(140, 38, 201, 0.35) 10px, transparent 10px, transparent 20px);
+    background-size: auto, 130%;
+    background-position: center, right bottom;
+    background-repeat: repeat, no-repeat;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 15px #8c26c9;
+}
+
+.character-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #ffde59;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: repeating-linear-gradient(-45deg, #2b1f4c 0px, #2b1f4c 15px, #141313 15px, #141313 30px);
+    color: #ffde59;
+    font-family: 'Impact', sans-serif;
+    font-size: 110px;
+    z-index: 3;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.8);
+    overflow: hidden;
+}
+
+.character-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.jojo-profile-box:hover .character-box {
+    transform: translate(-15px, -15px) scale(1.05);
+}
+
+.jojo-profile-box:hover .stand-aura {
+    transform: translate(25px, 20px) rotate(8deg);
+    background-color: rgba(140, 38, 201, 0.5);
+    box-shadow: 0 0 30px #8c26c9;
+}
+
+.jojo-role-badge {
+    background-color: #8c26c9;
+    color: #ffde59;
+    padding: 10px 25px;
+    font-family: 'Impact', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transform: skewX(-15deg);
+    border: 2px solid #ffde59;
+    box-shadow: 5px 5px 0px #000;
+}
+
+.jojo-info-section {
+    flex: 1;
+}
+
+.jojo-name {
+    font-family: 'Impact', sans-serif;
+    font-size: 65px;
+    margin: 0;
+    color: #ffde59;
+    -webkit-text-stroke: 1px #8c26c9;
+    text-shadow: 4px 4px 0px #51246b, 6px 6px 0px #000;
+    letter-spacing: 2px;
+}
+
+.jojo-catchphrase {
+    font-family: 'Poppins', sans-serif;
     font-size: 22px;
     font-style: italic;
-    font-family: 'Poppins';
+    color: #e1b420;
+    margin: 10px 0 25px 0;
+    border-left: 5px solid #8c26c9;
+    padding-left: 15px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
-.action-button {
-    font-family: 'Poppins';
-    font-size: 22px;
-    margin-top: 30px;
+.jojo-bio {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
 }
 
-.action-button a {
-    background-color: #341f83;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 8px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+.jojo-stand-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
-.action-button a:hover {
-    background-color: #482ab8;
+.stat {
+    background: #111;
+    border: 2px solid #8c26c9;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: skewX(-15deg);
+    box-shadow: 3px 3px 0px #ffde59;
 }
 
-/* footer{
-    background-color: #0d003b;
-    color: white;
-    text-align: center;
-    padding: 40px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-} */
-
-/*  */
-
-.judul{
-    font-family: 'Impact';
-    font-size: 100px;
-    text-align: center;
-    position: absolute;
-    top: 20vh; /* Sesuaikan angka ini jika kurang/lebih ke atas */
-    left: 0;
-    width: 100%;
-}
-.judul p {
-    margin: 0;
+.stat-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-.nama-about{
-    font-family: 'Impact';
-    font-size: 61px;
+.stat-grade {
+    font-family: 'Impact', sans-serif;
+    font-size: 28px;
+    color: #ffde59;
+    text-shadow: 2px 2px 0px #8c26c9;
 }
 
-.nama-about p{
-    margin: 0;
-    line-height: 1;
+.stat:hover {
+    animation: statShake 0.4s infinite;
+    background: #8c26c9;
+    border-color: #ffde59;
+}
+.stat:hover .stat-grade {
+    color: #fff;
+    text-shadow: 2px 2px 0px #000;
 }
 
-.deskripsi {
-    font-family: 'Poppins';
-    font-size: 20px;
-    margin-top: 20px;
-    max-width: 800px; /* Supaya teks panjang tidak melebar terlalu jauh ke kanan */
-    line-height: 1.6;
-    color: #e0e0e0; /* Warna sedikit abu-abu agar lebih nyaman dibaca */
-    text-align: justify; /* Membuat teks rata kanan dan kiri */
+@keyframes statShake {
+    0% { transform: skewX(-15deg) translate(2px, 1px); }
+    25% { transform: skewX(-15deg) translate(-1px, -2px); }
+    50% { transform: skewX(-15deg) translate(3px, 0px); }
+    75% { transform: skewX(-15deg) translate(-2px, 2px); }
+    100% { transform: skewX(-15deg) translate(1px, -1px); }
 }
