@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Wisnu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a class="logo">Wisnuk</a>
+        <div class="nav-link">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Project</a>
+            <a href="funfacts.html">Fun Facts</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+    
+    <main class="jojo-wrapper">
+        <div class="gogogo-container">
+            <img src="assets/menacing.png" class="gogo g1" alt="menacing">
+            <img src="assets/menacing2.png" class="gogo g2" alt="menacing">
+            <img src="assets/menacing3.png" class="gogo g3" alt="menacing">
+            <img src="assets/menacing2.png" class="gogo g4" alt="menacing">
+            <img src="assets/menacing.png" class="gogo g5" alt="menacing">
+        </div>
+
+        <div class="jojo-layout contact-layout">
+            <div class="contact-info">
+                <h1 class="contact-title">SUMMON ME</h1>
+                <p class="contact-desc">Are you an enemy stand user? Or just want to collaborate with an awesome developer? Send me your message and I'll track you down using Hermit Purple.</p>
+                <div class="contact-methods">
+                    <div class="method"><span class="method-icon">📍</span> Bandar Lampung, Indonesia</div>
+                    <div class="method"><span class="method-icon">📞</span> +62 831-7952-1533</div>
+                    <div class="method"><span class="method-icon">✉️</span> wisnuwira@gmail.com</div>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <form id="contactForm" class="jojo-form">
+                    <div class="form-group">
+                        <label for="name">User Name</label>
+                        <input type="text" id="name" placeholder="Enter your identity...">
+                        <span class="error-msg" id="nameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="text" id="email" placeholder="example@gmail.com">
+                        <span class="error-msg" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" rows="5" placeholder="Write your intention..."></textarea>
+                        <span class="error-msg" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="jojo-submit-btn">Send Message</button>
+                </form>
+            </div>
+            
+            <div id="successModal" class="jojo-modal">
+                <div class="modal-content">
+                    <h2 class="modal-title">GREAT DAZE!</h2>
+                    <p>Your message has been successfully transmitted. I'll get back to you soon.</p>
+                    <button id="closeModalBtn" class="action-button-jojo" style="background:#111; color:#ffde59;">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+    </main>
+</body>
+</html>
