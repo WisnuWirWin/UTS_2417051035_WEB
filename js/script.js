@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             messageError.textContent = "";
 
             if (nameInput.value.trim() === "") {
-                nameError.textContent = "Stand User Name cannot be empty!";
+                nameError.textContent = "User Name cannot be empty!";
                 isValid = false;
             }
             const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
